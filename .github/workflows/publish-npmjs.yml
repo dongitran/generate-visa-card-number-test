@@ -43,7 +43,8 @@ jobs:
           curl -X POST \
             https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
             -d chat_id=${TELEGRAM_CHAT_ID} \
-            -d text="🎉 Package 'Generate Visa Card Number' deployment was successful! Your amazing tool is now available for everyone! 🚀✨"
+            -d parse_mode=HTML \
+            -d text="🎉 <b>Generate Visa Card Number</b> deployment was successful!<br/>Your amazing tool is now available for everyone! 🚀✨"
 
   send-notification-failed:
     needs: publish-npm
@@ -58,4 +59,5 @@ jobs:
           curl -X POST \
             https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
             -d chat_id=${TELEGRAM_CHAT_ID} \
-            -d text="❌ Oh no! The deployment of 'Generate Visa Card Number' failed! There might be something wrong with the process. Please check it out! 🛠️🔍"
+            -d parse_mode=HTML \
+            -d text="❌ Oh no! The deployment of <b>Generate Visa Card Number</b> failed!<br/>There might be something wrong with the process. Please check it out! 🛠️🔍"
