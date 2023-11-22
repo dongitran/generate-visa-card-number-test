@@ -21,11 +21,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    
-    - name: Set up Git identity
+
+    - name: Set up Git identity and push changes
+      env:
+        GH_TOKEN: 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
       run: |
         git config --global user.email "thiendong.iuh@gmail.com"
         git config --global user.name "dongtran"
+        git add .
+        git commit -m "update version"
+        git push origin main
 
     - name: Install dependencies and create package-lock.json
       run: |
