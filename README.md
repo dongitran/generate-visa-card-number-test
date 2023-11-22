@@ -1,4 +1,4 @@
-# Credit Card Generator
+# Generate visa card number
 
 A simple Node.js package to generate random credit card information such as card numbers, expiration dates, and CVV codes for testing purposes.
 
@@ -7,12 +7,12 @@ A simple Node.js package to generate random credit card information such as card
 To use this package in your Node.js project, install it via npm:
 
 ```bash
-npm install credit-card-generator
+npm install generate-visa-card-number-test
 ```
 
 ## Usage
 ```javascript
-const generateCreditCard = require('credit-card-generator');
+const generateCreditCard = require('generate-visa-card-number-test');
 
 // Generate a random credit card information
 const creditCard = generateCreditCard();
@@ -23,7 +23,7 @@ The generateCreditCard() function returns an object containing a randomly genera
 
 Optionally, you can provide a Bank Identification Number (BIN) as an argument to generateCreditCard() to create a card number starting with a specific BIN:
 ```javascript
-const generateCreditCard = require('credit-card-generator');
+const generateCreditCard = require('generate-visa-card-number-test');
 
 // Generate a credit card with a specific BIN (Bank Identification Number)
 const bin = '400314'; // Replace with your desired BIN
