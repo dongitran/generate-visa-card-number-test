@@ -25,4 +25,5 @@ jobs:
     - name: Install dependencies and create package-lock.json
       run: |
         npm install
+        npm install grunt --save-dev
         grunt
