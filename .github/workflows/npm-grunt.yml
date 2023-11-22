@@ -28,6 +28,7 @@ jobs:
       run: |
         git config user.email "thiendong.iuh@gmail.com"
         git config user.name "dongtran"
+        git pull origin main
 
     - name: Install dependencies and create package-lock.json
       run: |
