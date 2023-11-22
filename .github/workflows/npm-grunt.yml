@@ -10,18 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-
     steps:
     - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 14.x
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 14.x  # Sử dụng phiên bản Node.js 14.x
 
+    # Các bước tiếp theo tương tự như trước đó...
     - name: Set up Git identity and push changes
       env:
         GH_TOKEN: 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
@@ -36,3 +33,4 @@ jobs:
         npm install grunt --save-dev
         npm install grunt-contrib-copy grunt-bump grunt-exec --save-dev
         grunt
+    
