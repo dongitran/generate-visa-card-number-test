@@ -22,7 +22,7 @@ jobs:
     - name: Set up Git identity and push changes
       env:
         GH_TOKEN: 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
-        NODE_AUTH_TOKEN: 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
+        NODE_AUTH_TOKEN: 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
       run: |
         git config user.email "thiendong.iuh@gmail.com"
         git config user.name "dongtran"
