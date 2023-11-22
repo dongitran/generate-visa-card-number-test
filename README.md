@@ -25,9 +25,6 @@ Optionally, you can provide a Bank Identification Number (BIN) as an argument to
 ```javascript
 const generateCreditCard = require('credit-card-generator');
 
-// Generate a random credit card information
-const generateCreditCard = require('credit-card-generator');
-
 // Generate a credit card with a specific BIN (Bank Identification Number)
 const bin = '400314'; // Replace with your desired BIN
 const creditCard = generateCreditCard(bin);
