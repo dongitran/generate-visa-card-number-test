@@ -36,7 +36,7 @@ jobs:
       - name: Send Telegram Notification
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: "YOUR_CHAT_ID"
+          TELEGRAM_CHAT_ID: "${{ secrets.TELEGRAM_GROUP_DEPLOYMENTS }}"
         run: |
           curl -X POST \
             https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
