@@ -21,6 +21,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    
+    - name: Set up Git identity
+      run: |
+        git config --global user.email "thiendong.iuh@gmail.com"
+        git config --global user.name "dongtran"
 
     - name: Install dependencies and create package-lock.json
       run: |
