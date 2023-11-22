@@ -26,8 +26,8 @@ jobs:
       env:
         GH_TOKEN: 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
       run: |
-        git config --global user.email "thiendong.iuh@gmail.com"
-        git config --global user.name "dongtran"
+        git config user.email "thiendong.iuh@gmail.com"
+        git config user.name "dongtran"
         git add .
         git commit -m "update version"
         git push origin main
