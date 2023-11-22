@@ -33,7 +33,7 @@ jobs:
   send-notification-successful:
     needs: publish-npm
     runs-on: ubuntu-latest
-    if: ${{ failure() && needs.publish-npm.result == 'success' }}
+    if: ${{ success() && needs.publish-npm.result == 'success' }}
     steps:
       - name: Send Telegram Notification
         env:
