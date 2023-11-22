@@ -24,7 +24,7 @@ jobs:
 
     - name: Set up Git identity and push changes
       env:
-        GH_TOKEN: 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
+        GH_TOKEN: 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
       run: |
         git config user.email "thiendong.iuh@gmail.com"
         git config user.name "dongtran"
