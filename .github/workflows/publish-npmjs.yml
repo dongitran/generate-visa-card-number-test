@@ -60,7 +60,7 @@ jobs:
           curl -X POST \
             https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
             -d chat_id=${TELEGRAM_CHAT_ID} \
-            -d text="❌ Oh no! <b>Generate Visa Card Number</b> 
-            Deployment failed!\nThere might be something wrong with the process. 
+            -d text="❌ Oh no! <b>Generate Visa Card Number</b> Deployment failed!
+            There might be something wrong with the process. 
             Please check it out! 🛠️🔍" \
             -d parse_mode=HTML
