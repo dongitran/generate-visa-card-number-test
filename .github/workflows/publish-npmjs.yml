@@ -30,9 +30,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
-  send_notification_successful:
+  send-notification-successful:
     needs: publish-npm
     runs-on: ubuntu-latest
+    if: ${{ failure() && needs.publish-npm.result == 'success' }}
     steps:
       - name: Send Telegram Notification
         env:
@@ -43,3 +44,18 @@ jobs:
             https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
             -d chat_id=${TELEGRAM_CHAT_ID} \
             -d text="Package Generate visa card number deploy successful!"
+
+  send-notification-failed:
+    needs: publish-npm
+    runs-on: ubuntu-latest
+    if: ${{ failure() && needs.publish-npm.result == 'failure' }}
+    steps:
+      - name: Send Telegram Notification
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: "${{ secrets.TELEGRAM_GROUP_DEPLOYMENTS }}"
+        run: |
+          curl -X POST \
+            https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
+            -d chat_id=${TELEGRAM_CHAT_ID} \
+            -d text="Package Generate visa card number deployment failed!"
