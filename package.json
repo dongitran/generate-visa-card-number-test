@@ -1,12 +1,32 @@
 {
   "name": "generate-visa-card-number-test",
-  "version": "1.1.16",
-  "description": "",
+  "version": "1.1.17",
+  "description": "A utility for generating test Visa card numbers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["generate visa number"],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "generate",
+    "visa",
+    "card",
+    "numbers",
+    "test",
+    "utilities",
+    "generate visa number",
+    "credit card number"
+  ],
+  "author": "thiendong.iuh@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongtranthien/generate-visa-card-number-test"
+  },
+  "bugs": {
+    "url": "https://github.com/dongtranthien/generate-visa-card-number-test/issues"
+  },
+  "homepage": "https://github.com/dongtranthien/generate-visa-card-number-test#readme",
+  "engines": {
+    "node": ">=10"
+  }
 }
